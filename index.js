@@ -1,11 +1,11 @@
-var CodeMirror = require("./node_modules/codemirror/addon/runmode/runmode.node.js");
+var CodeMirror = require("codemirror/addon/runmode/runmode.node.js");
 
 module.exports = function(code, lang) {
   var out = "";
 
   var lang = lang.toLowerCase(), modeName = lang;
 
-  require("./node_modules/codemirror/mode/meta.js");
+  require("codemirror/mode/meta.js");
 
   CodeMirror.modeInfo.forEach(function(info) {
     if (info.mime == lang) {
@@ -18,7 +18,7 @@ module.exports = function(code, lang) {
 
   // TODO: We never use lang, which makes me think this is wrong?
   if (!CodeMirror.modes[modeName])
-    require("./node_modules/codemirror/mode/" + modeName + "/" + modeName + ".js");
+    require("codemirror/mode/" + modeName + "/" + modeName + ".js");
 
   function esc(str) {
     return str.replace(/[<&]/g, function(ch) { return ch == "&" ? "&amp;" : "&lt;"; });
