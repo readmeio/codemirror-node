@@ -10,5 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "codemirror": "^5.18.2"
-  }
+  },
+  "repository": "https://github.com/readmeio/codemirror-node"
 }
