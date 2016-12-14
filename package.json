@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "codemirror": "^5.18.2"
+    "codemirror": "5.4.0"
   },
   "repository": "https://github.com/readmeio/codemirror-node"
 }
