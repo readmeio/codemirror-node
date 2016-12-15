@@ -1,9 +1,11 @@
 var CodeMirror = require("codemirror/addon/runmode/runmode.node.js");
 
-module.exports = function(code, lang) {
+module.exports = function(code, lang, mode) {
   var out = "";
 
   var lang = lang.toLowerCase(), modeName = lang;
+
+  if (!mode) mode = lang;
 
   require("codemirror/mode/meta.js");
 
@@ -30,7 +32,7 @@ module.exports = function(code, lang) {
     else out += accum;
   }
 
-  CodeMirror.runMode(code, 'javascript', function(text, style) {
+  CodeMirror.runMode(code, mode, function(text, style) {
     if (style != curStyle) {
       flush();
       curStyle = style; accum = text;
