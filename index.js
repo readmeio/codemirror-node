@@ -23,12 +23,21 @@ module.exports = function(code, lang, mode) {
     require("codemirror/mode/" + modeName + "/" + modeName + ".js");
 
   function esc(str) {
-    return str.replace(/[<&]/g, function(ch) { return ch == "&" ? "&amp;" : "&lt;"; });
+    const map = {
+      '<': '&lt;',
+      '/': '&#47;',
+      '&': '&amp;',
+      '>': '&gt;',
+    };
+    return str.replace(/[<&\/>]/g, ch => map[ch]);
   }
 
   var curStyle = null, accum = "";
   function flush() {
-    if (curStyle) out += "<span class=\"" + curStyle.replace(/(^|\s+)/g, "$1cm-") + "\">" + accum + "</span>";
+    if (curStyle) {
+      accum = esc(accum);
+      out += "<span class=\"" + curStyle.replace(/(^|\s+)/g, "$1cm-") + "\">" + accum + "</span>";
+    }
     else out += accum;
   }
 
