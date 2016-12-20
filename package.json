@@ -1,6 +1,6 @@
 {
   "name": "codemirror-node",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Run codemirror on the server",
   "main": "index.js",
   "scripts": {
