@@ -34,8 +34,8 @@ module.exports = function(code, lang, mode) {
 
   var curStyle = null, accum = "";
   function flush() {
+    accum = esc(accum);
     if (curStyle) {
-      accum = esc(accum);
       out += "<span class=\"" + curStyle.replace(/(^|\s+)/g, "$1cm-") + "\">" + accum + "</span>";
     }
     else out += accum;
