@@ -1,7 +1,7 @@
 {
   "name": "codemirror-node",
   "version": "0.0.5",
-  "description": "Run codemirror on the server",
+  "description": "Run CodeMirror on the server",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -9,10 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "codemirror": "^5.48.0"
+    "codemirror": "^5.48.2"
   },
   "repository": "https://github.com/readmeio/codemirror-node",
   "devDependencies": {
-    "mocha": "^6.1.4"
+    "mocha": "^6.2.0"
   }
 }
