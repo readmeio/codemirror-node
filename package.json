@@ -6,13 +6,12 @@
   "scripts": {
     "test": "mocha"
   },
-  "author": "",
   "license": "ISC",
   "dependencies": {
-    "codemirror": "^5.48.2"
+    "codemirror": "^5.62.3"
   },
   "repository": "https://github.com/readmeio/codemirror-node",
   "devDependencies": {
-    "mocha": "^6.2.0"
+    "mocha": "^9.1.1"
   }
 }
