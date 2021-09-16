@@ -1,0 +1,13 @@
+{
+  "extends": "@readme/eslint-config",
+  "root": true,
+  "rules": {
+    "global-require": "off",
+    "import/no-dynamic-require": "off",
+    "no-param-reassign": "off" // should fix these
+  },
+  "env": {
+    "browser": true,
+    "jest": true
+  }
+}

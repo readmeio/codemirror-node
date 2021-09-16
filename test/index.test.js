@@ -34,7 +34,7 @@ public class HelloWorld {
     // Prints "Hello, World" to the terminal window.
     System.out.println("Hello, World");
   }
-}`
+}`;
 
     assert.equal(
       codemirror(code, 'clike', 'text/x-java'),
